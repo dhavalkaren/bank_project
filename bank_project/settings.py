@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'banks',
+    'graphene_django',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -78,6 +81,12 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+}
+
+
+GRAPHENE = {
+    "SCHEMA": "bank_project.schema.schema",
+    "ATOMIC_MUTATIONS": True,
 }
 
 
